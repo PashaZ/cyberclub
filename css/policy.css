@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1B0D39;
+  color: #1B0D39;
+  font-family: "Cera Pro", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.title-block {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.title {
+  color: #3AC4B9;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.title-text {
+  color: #3AC4B9;
+  font-size: 16px;
+  font-weight: 900;
+  text-align: left;
+  line-height: 2;
+}/*# sourceMappingURL=policy.css.map */

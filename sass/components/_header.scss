@@ -1,0 +1,84 @@
+.header-section {
+    background-image: url('../../images/11.jpeg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+
+.domain {
+    padding-top: 60px;
+    margin-left: 126px;
+
+    color: $primary-text-color;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header-button-block {
+    position: relative;
+    display: flex;
+    margin-top: 230px;
+    align-items: center;
+}
+
+.skill {
+    font-size: 50px;
+    background-color: $button-bg-color;
+    line-height: 1.4;
+    font-weight: 900;
+    text-align: center;
+    padding: 35px 71px;
+    margin: 0;
+}
+
+.reserve {
+    background: $button-bg-color;
+    margin-left: 100px;
+    padding: 23px 50px;
+}
+
+.reserve-button {
+    color: $block-text-color;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.header-text-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 150px;
+    margin: 0;
+    color: $primary-text-color;
+}
+
+.header-text {
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+.header-text-main {
+    font-size: 36px;
+    font-weight: 900;
+    margin-left: 50px;
+}
+
+.header-section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 105px;
+    background-color: $primary-bg-color;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    margin-top: 40px;
+}
