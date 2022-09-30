@@ -17,9 +17,15 @@ img {
 }
 
 .container {
+  display: block;
   width: 1200px;
   padding: 0;
   margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .header-section {
@@ -50,6 +56,8 @@ img {
   .header-button-block {
     display: block;
     align-items: center;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -64,7 +72,7 @@ img {
 }
 @media (max-width: 1000px) {
   .skill {
-    width: 450px;
+    width: 380px;
     padding: 17px 15px;
     font-size: 24px;
     margin: 0 auto;
@@ -107,7 +115,7 @@ img {
 }
 @media (max-width: 1000px) {
   .header-text-block {
-    width: 450px;
+    width: 100%;
     text-align: center;
     display: block;
     margin: 0 auto;
@@ -156,27 +164,25 @@ img {
 @media (max-width: 1000px) {
   .section-hero {
     position: relative;
-    display: flex;
+    height: 650px;
+    width: 100%;
   }
 }
 
 .hero {
   display: block;
-  width: 720px;
-  margin-left: auto;
-  margin-right: 46px;
+  width: 100%;
+  text-align: right;
 }
 @media (max-width: 1000px) {
   .hero {
-    margin-top: 50px;
-    width: 280px;
-    float: right;
-    height: 300px;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 20px;
   }
 }
 
 .hero-title {
-  text-align: right;
   color: #FFFFFF;
   font-size: 48px;
   font-weight: 900;
@@ -191,6 +197,8 @@ img {
 }
 
 .hero-text {
+  width: 60%;
+  margin-left: auto;
   font-size: 20px;
   color: #3AC4B9;
   font-weight: 900;
@@ -209,18 +217,31 @@ img {
 @media (max-width: 1000px) {
   .hero-block {
     display: block;
-    width: 40%;
   }
 }
 
 .hero-list {
   display: block;
   margin-top: 80px;
-  width: 300px;
+  width: 40%;
   height: 300px;
   padding: 30px;
   list-style: none;
 }
+@media (max-width: 1000px) {
+  .hero-list {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 11px;
+    line-height: 1em;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
 .hero-about {
   height: 88px;
   padding: 20px 70px;
@@ -232,11 +253,22 @@ img {
   line-height: 1.1em;
   font-weight: 900;
 }
+@media (max-width: 1000px) {
+  .hero-about {
+    height: 52px;
+    padding: 13px 10px 10px 20px;
+  }
+}
 
 .hero-image-block {
   display: block;
   margin-top: 80px;
   margin-left: 50px;
+}
+@media (max-width: 1000px) {
+  .hero-image-block {
+    margin: 200px 20px 0 20px;
+  }
 }
 
 .hero-image {
@@ -244,9 +276,7 @@ img {
 }
 @media (max-width: 1000px) {
   .hero-image {
-    display: flex;
-    width: 360px;
-    text-align: center;
+    width: 100%;
   }
 }
 
@@ -264,7 +294,9 @@ img {
 }
 @media (max-width: 1000px) {
   .hero-image-text {
+    position: relative;
     font-size: 14px;
+    text-align: center;
   }
 }
 
@@ -277,6 +309,12 @@ img {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%);
           clip-path: polygon(0 0, 100% 0%, 100% 100%);
   margin-top: 48px;
+}
+@media (max-width: 1000px) {
+  .section-hero:after {
+    margin-top: -12px;
+    height: 150px;
+  }
 }
 
 .section-price {
@@ -319,6 +357,11 @@ img {
   font-weight: 900;
   line-height: 1.5;
   padding-bottom: 100px;
+}
+@media (max-width: 1000px) {
+  .section-table {
+    overflow-x: scroll;
+  }
 }
 
 caption {
@@ -374,7 +417,6 @@ td::before {
 }
 
 .benefits-block {
-  width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -388,7 +430,6 @@ td::before {
 }
 @media (max-width: 1000px) {
   .benefits-title {
-    display: block;
     font-size: 26px;
     line-height: 1.2em;
     margin-bottom: 35px;
@@ -396,22 +437,23 @@ td::before {
 }
 
 .benefits-title-text {
+  display: block;
   font-size: 40px;
   line-height: 1em;
   font-weight: 900;
 }
 @media (max-width: 1000px) {
   .benefits-title-text {
-    display: block;
     font-size: 16px;
     line-height: 1.2em;
   }
 }
 
 .features-list {
+  display: flex;
+  text-align: center;
   padding: 0;
   margin: 0;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   list-style: none;
@@ -419,7 +461,6 @@ td::before {
 @media (max-width: 1000px) {
   .features-list {
     display: flex;
-    width: 600px;
   }
 }
 
@@ -429,10 +470,21 @@ td::before {
   margin: 0;
   font-size: 1.25rem;
 }
+@media (max-width: 1000px) {
+  .feature {
+    width: 150px;
+  }
+}
 
 .feature-image {
   margin: 0 auto;
   width: 150px;
+}
+@media (max-width: 1000px) {
+  .feature-image {
+    display: flex;
+    width: 80px;
+  }
 }
 
 li > p {
@@ -442,8 +494,21 @@ li > p {
   color: #FFFFFF;
 }
 
+@media (max-width: 1000px) {
+  .footer-container-block {
+    padding: 20px;
+  }
+}
+
 .footer-title-block {
+  display: block;
+  text-align: left;
   padding-top: 50px;
+}
+@media (max-width: 1000px) {
+  .footer-title-block {
+    padding: 20px;
+  }
 }
 
 .footer-title {
@@ -454,6 +519,12 @@ li > p {
   font-weight: 900;
   margin: 0;
 }
+@media (max-width: 1000px) {
+  .footer-title {
+    font-size: 22px;
+    line-height: 1.2em;
+  }
+}
 
 .footer-text {
   font-size: 32px;
@@ -463,9 +534,22 @@ li > p {
   margin: 0;
   margin-bottom: 30px;
 }
+@media (max-width: 1000px) {
+  .footer-text {
+    font-size: 1rem;
+    line-height: 1.2em;
+  }
+}
 
 form {
   display: flex;
+}
+@media (max-width: 1000px) {
+  form {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+  }
 }
 
 .input-name {
@@ -479,6 +563,11 @@ form {
   color: #0B0607;
   font-family: "Cera Pro", sans-serif;
 }
+@media (max-width: 1000px) {
+  .input-name {
+    width: 100%;
+  }
+}
 
 .input-phone {
   width: 380;
@@ -491,6 +580,12 @@ form {
   font-size: 14px;
   color: #0B0607;
   font-family: "Cera Pro", sans-serif;
+}
+@media (max-width: 1000px) {
+  .input-phone {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 input::-moz-placeholder {
@@ -566,6 +661,11 @@ textarea::placeholder {
   color: #FFFFFF;
   font-family: "Cera Pro", sans-serif;
 }
+@media (max-width: 1000px) {
+  .policy-link {
+    font-size: 10px;
+  }
+}
 
 .checkbox {
   -webkit-appearance: none;
@@ -575,7 +675,7 @@ textarea::placeholder {
 }
 
 .check-icon {
-  display: inline-block;
+  display: block;
   width: 34px;
   height: 34px;
   border: none;
@@ -609,10 +709,23 @@ textarea::placeholder {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .submit-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .disclaimer {
   margin-top: 100px;
   margin-bottom: 50px;
+}
+@media (max-width: 1000px) {
+  .disclaimer {
+    margin-bottom: 10px;
+    padding: 20px;
+  }
 }
 
 .disclaimer-text {

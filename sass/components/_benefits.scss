@@ -7,7 +7,6 @@
 }
 
 .benefits-block {
-    width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -20,26 +19,20 @@
     font-weight: 900;
 
     @media (max-width: 1000px) {
-        display: block;
-
         font-size: 26px;
         line-height: 1.2em;
         margin-bottom: 35px;
-        // display: block;
-        // text-align: center;
-
     }
 
 }
 
 .benefits-title-text {
+    display: block;
     font-size: 40px;
     line-height: 1em;
     font-weight: 900;
 
     @media (max-width: 1000px) {
-        display: block;
-
         font-size: 16px;
         line-height: 1.2em;
     }
@@ -47,16 +40,16 @@
 }
 
 .features-list {
+    display: flex;
+    text-align: center;
     padding: 0;
     margin: 0;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
 
     @media (max-width: 1000px) {
         display: flex;
-        width: 600px
     }
 
     // ----------------------------
@@ -67,11 +60,22 @@
     justify-content: center;
     margin: 0;
     font-size: 1.25rem;
+
+    @media (max-width: 1000px) {
+        width: 150px;
+
+    }
 }
 
 .feature-image {
     margin: 0 auto;
     width: 150px;
+
+    @media (max-width: 1000px) {
+        display: flex;
+        width: 80px;
+
+    }
 }
 
 li>p {

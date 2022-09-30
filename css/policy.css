@@ -17,9 +17,15 @@ img {
 }
 
 .container {
+  display: block;
   width: 1200px;
   padding: 0;
   margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .title-block {

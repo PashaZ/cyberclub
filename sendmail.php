@@ -1,46 +1,40 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+  $body = "";
+  $to = "contact@playerpl.com";
+  $subject = "Title of letter";
 
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/Exception.php';
+  if (trim(!empty($_POST['name']))){
+      $body.='<p><strong>Név:</strong> '.$_POST['name'].'</p>';
+  }
+  if (trim(!empty($_POST['phone']))){
+      $body.='<p><strong>Név:</strong> '.$_POST['phone'].'</p>';
+  }
+  if (trim(!empty($_POST['comment']))){
+      $body.='<p><strong>Név:</strong> '.$_POST['comment'].'</p>';
+  }
+  
+  $message = "
+    <html>
+    <head>
+      <title>$subject</title>
+    </head>
+    <body>
+      $body 
+    </body>
+    </html>
+    ";
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=utf-8';
+  $headers[] = 'From: info@polishplayer.com';
 
+  if(!mail($to, $subject, $message, implode("\r\n", $headers))){
+      $message = "Hiba";
+  } else{
+      $message = 'Adatok elküldve!';
+  }
 
-require 'vendor/autoload.php';
+  $response = ['message' => $message];
 
-
-$mail = new PHPMailer(true);
-$mail -> CharSet='UTF-8';
-$mail->isHTML(true);
-
-$mail->setFrom('cyberclub@example.com', 'CyberclubMailer');
-$mail->addAddress('pavel.zakernychnyy.qs@gmail.com', 'Admin');
-$mail->Subject = 'Title of letter';
-
-
-if (trim(!empty($_POST['name']))){
-    $body.='<p><strong>Імя:</strong> '.$_POST['name'].'</p>';
-}
-if (trim(!empty($_POST['phone']))){
-    $body.='<p><strong>Імя:</strong> '.$_POST['phone'].'</p>';
-}
-if (trim(!empty($_POST['comment']))){
-    $body.='<p><strong>Імя:</strong> '.$_POST['comment'].'</p>';
-}
-
-$mail->Body=$body;
-
-if(!$mail->send()){
-    $message = "Помилка";
-} else{
-    $message = 'Дані відправлені!';
-}
-
-$response = ['message' => $message];
-
-header('Content-type: application/json');
-echo json_encode($response);
+  header('Content-type: application/json');
+  echo json_encode($response);
 ?>
-
-
-

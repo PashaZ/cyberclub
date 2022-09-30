@@ -1,5 +1,18 @@
+.footer-container-block {
+    @media(max-width:1000px) {
+        padding: 20px;
+    }
+}
+
 .footer-title-block {
+    display: block;
+    text-align: left;
     padding-top: 50px;
+
+    @media(max-width:1000px) {
+        padding: 20px;
+    }
+
 }
 
 .footer-title {
@@ -10,6 +23,11 @@
     font-weight: 900;
     margin: 0;
 
+    @media(max-width:1000px) {
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+
 }
 
 .footer-text {
@@ -19,10 +37,21 @@
     color: $primary-text-color;
     margin: 0;
     margin-bottom: 30px;
+
+    @media(max-width:1000px) {
+        font-size: 1rem;
+        line-height: 1.2em;
+    }
 }
 
 form {
     display: flex;
+
+    @media(max-width:1000px) {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+    }
 }
 
 .input-name {
@@ -37,6 +66,9 @@ form {
     color: #0B0607;
     font-family: $main-font-family;
 
+    @media(max-width:1000px) {
+        width: 100%;
+    }
 }
 
 .input-phone {
@@ -51,6 +83,11 @@ form {
     font-size: 14px;
     color: #0B0607;
     font-family: $main-font-family;
+
+    @media(max-width:1000px) {
+        width: 100%;
+        margin-left: 0;
+    }
 
 }
 
@@ -99,12 +136,17 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: left;
+
 }
 
 .policy-link {
     text-decoration: none;
     color: #FFFFFF;
     font-family: $main-font-family;
+
+    @media(max-width:1000px) {
+        font-size: 10px;
+    }
 }
 
 .checkbox {
@@ -113,10 +155,11 @@ textarea::placeholder {
     appearance: none;
 
     position: absolute;
+
 }
 
 .check-icon {
-    display: inline-block;
+    display: block;
     width: 34px;
     height: 34px;
     border: none;
@@ -135,7 +178,6 @@ textarea::placeholder {
     display: flex;
     margin-top: 62px;
     margin-left: 20px;
-
 }
 
 .submit-btn {
@@ -150,11 +192,22 @@ textarea::placeholder {
     color: $button-bg-color;
     border: none;
     cursor: pointer;
+
+    @media(max-width:1000px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .disclaimer {
     margin-top: 100px;
     margin-bottom: 50px;
+
+    @media(max-width:1000px) {
+        margin-bottom: 10px;
+        padding: 20px;
+    }
 }
 
 .disclaimer-text {

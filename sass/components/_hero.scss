@@ -5,26 +5,24 @@
 
     @media (max-width: 1000px) {
         position: relative;
-        display: flex;
+        height: 650px;
+        width: 100%;
     }
 }
 
 .hero {
     display: block;
-    width: 720px;
-    margin-left: auto;
-    margin-right: 46px;
+    width: 100%;
+    text-align: right;
 
     @media (max-width: 1000px) {
-        margin-top: 50px;
-        width: 280px;
-        float: right;
-        height: 300px;
+        width: 100%;
+        padding-top: 10px;
+        padding-right: 20px;
     }
 }
 
 .hero-title {
-    text-align: right;
     color: $secondary-text-color;
     font-size: 48px;
     font-weight: 900;
@@ -38,6 +36,8 @@
 }
 
 .hero-text {
+    width: 60%;
+    margin-left: auto;
     font-size: 20px;
     color: $primary-text-color;
     font-weight: 900;
@@ -55,19 +55,29 @@
 
     @media (max-width: 1000px) {
         display: block;
-        width: 40%;
+        // width: 40%;
     }
 }
 
 .hero-list {
     display: block;
     margin-top: 80px;
-    width: 300px;
+    width: 40%;
     height: 300px;
     padding: 30px;
     list-style: none;
 
-    @media (max-width: 1000px) {}
+    @media (max-width: 1000px) {
+        width: 40%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 11px;
+        line-height: 1em;
+        margin-left: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
 }
 
@@ -81,21 +91,28 @@
     transform: skewY(8deg);
     line-height: 1.1em;
     font-weight: 900;
+
+    @media (max-width: 1000px) {
+        height: 52px;
+        padding: 13px 10px 10px 20px;
+    }
 }
 
 .hero-image-block {
     display: block;
     margin-top: 80px;
     margin-left: 50px;
+
+    @media (max-width: 1000px) {
+        margin: 200px 20px 0 20px;
+    }
 }
 
 .hero-image {
     width: 900px;
 
     @media (max-width: 1000px) {
-        display: flex;
-        width: 360px;
-        text-align: center;
+        width: 100%;
     }
 }
 
@@ -112,7 +129,9 @@
     z-index: 2;
 
     @media (max-width: 1000px) {
+        position: relative;
         font-size: 14px;
+        text-align: center;
     }
 }
 
@@ -124,4 +143,10 @@
     background-color: $primary-bg-color;
     clip-path: polygon(0 0, 100% 0%, 100% 100%);
     margin-top: 48px;
+
+    @media (max-width: 1000px) {
+        margin-top: -12px;
+        height: 150px;
+
+    }
 }

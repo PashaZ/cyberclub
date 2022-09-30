@@ -43,6 +43,11 @@
     font-weight: 900;
     line-height: 1.5;
     padding-bottom: 100px;
+
+    @media(max-width:1000px) {
+        overflow-x: scroll;
+
+    }
 }
 
 caption {
@@ -54,6 +59,7 @@ tbody {
     border: none;
     line-height: 1.5;
     text-align: center;
+
 }
 
 td {
@@ -66,6 +72,7 @@ td {
     white-space: nowrap;
     border-spacing: 2px;
 }
+
 
 td::before {
     content: '';
